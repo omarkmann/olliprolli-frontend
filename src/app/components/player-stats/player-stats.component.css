@@ -1,0 +1,19 @@
+.player-logo {
+  height: 2em;
+  width: 2em;
+  image-rendering: pixelated;
+}
+
+table {
+  width: 95%;
+  max-width: 1000px;
+}
+
+.mat-column-name, .mat-column-number, .mat-column-icon, .mat-column-actions {
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+}
+
+td.mat-column-actions {
+  width: 40px;
+}

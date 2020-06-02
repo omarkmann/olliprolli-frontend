@@ -1,0 +1,30 @@
+<div fxLayout="column" fxLayoutAlign="start center" class="player-stats-detail-wrapper">
+  <div>
+    <div class="back-button">
+      <button mat-icon-button routerLink="/player-stats">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+    </div>
+    <div class="content">
+      <div class="stats-header" fxLayout="column" fxLayoutAlign="start center">
+        <div class="image-container">
+          <img src="{{playerStats.iconUrl}}" alt="Icon">
+        </div>
+        <h1>{{playerName}}</h1>
+      </div>
+    </div>
+    <div>
+      <mat-tab-group mat-align-tabs="start">
+        <mat-tab label="General">
+          <div class="tab-content" fxLayout="row" fxLayoutGap="8px">
+            <div fxFlex="50">Deaths</div>
+            <div fxFlex="50">{{playerStats.deathCount}}</div>
+          </div>
+        </mat-tab>
+        <mat-tab label="Misc">
+          <div fxLayout="column" fxLayoutAlign="start center" class="tab-content">Coming Soon</div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

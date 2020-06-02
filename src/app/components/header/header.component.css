@@ -1,0 +1,16 @@
+.brand:focus {
+  outline: none;
+}
+.brand {
+  cursor: pointer;
+  user-select: none;
+}
+
+mat-toolbar {
+  padding: 1em;
+  height: auto;
+}
+
+button.active {
+  font-weight: bolder;
+}

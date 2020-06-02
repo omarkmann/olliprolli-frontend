@@ -1,0 +1,14 @@
+.number-generator-card {
+  width: 80%;
+  max-width: 300px;
+  text-align: center;
+}
+
+mat-card-content {
+  padding: 1em;
+  margin: 0;
+}
+
+mat-card-footer {
+  padding: 0.75em;
+}
