@@ -1,9 +1,11 @@
 <div class="card-wrapper" fxLayout="column" fxLayoutAlign="start center">
   <mat-card class="number-generator-card">
     <mat-card-title>Number Generator</mat-card-title>
-    <mat-card-content>
-      <button mat-flat-button color="primary" (click)="shuffleNumbers()">Generate</button>
+    <mat-card-content fxLayout="column" fxLayoutAlign="center center">
+      <h3>{{result}}</h3>
     </mat-card-content>
-    <mat-card-footer>{{result}}</mat-card-footer>
+    <mat-card-actions>
+      <button mat-button (click)="shuffleNumbers()" color="primary">GENERATE</button>
+    </mat-card-actions>
   </mat-card>
 </div>

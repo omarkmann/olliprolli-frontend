@@ -1,6 +1,9 @@
 .number-generator-card {
   width: 80%;
   max-width: 300px;
+}
+
+.number-generator-card .mat-card-content {
   text-align: center;
 }
 
