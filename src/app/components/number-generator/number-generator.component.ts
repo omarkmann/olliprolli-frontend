@@ -26,12 +26,11 @@ export class NumberGeneratorComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.shuffleNumbers();
   }
 
   shuffleNumbers() {
-    console.log(this.numbers);
     let shuffledNumbers = NumberGeneratorComponent.shuffleArray(this.numbers);
-    console.log(shuffledNumbers);
     shuffledNumbers = shuffledNumbers.slice(0, 6);
     shuffledNumbers.sort((a, b) => a - b);
     this.setResult(shuffledNumbers);
