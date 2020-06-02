@@ -1,19 +1,18 @@
 <div fxLayout="column" fxLayoutAlign="start center" class="player-stats-detail-wrapper">
-  <div>
-    <div class="back-button">
-      <button mat-icon-button routerLink="/player-stats">
-        <mat-icon>arrow_back</mat-icon>
-      </button>
-    </div>
-    <div class="content">
-      <div class="stats-header" fxLayout="column" fxLayoutAlign="start center">
-        <div class="image-container">
-          <img src="{{playerStats.iconUrl}}" alt="Icon">
-        </div>
-        <h1>{{playerName}}</h1>
+  <mat-card class="content">
+    <div fxLayout="row" fxLayoutAlign="space-between">
+      <mat-card-header>
+        <img mat-card-avatar class="player-avatar" src="{{playerStats.iconUrl}}" alt="">
+        <mat-card-title>{{playerName}}</mat-card-title>
+        <mat-card-subtitle>{{playerStats.playerId}}</mat-card-subtitle>
+      </mat-card-header>
+      <div>
+        <button mat-icon-button routerLink="/player-stats">
+          <mat-icon>close</mat-icon>
+        </button>
       </div>
     </div>
-    <div>
+    <mat-card-content>
       <mat-tab-group mat-align-tabs="start">
         <mat-tab label="General">
           <div class="tab-content" fxLayout="row" fxLayoutGap="8px">
@@ -25,6 +24,6 @@
           <div fxLayout="column" fxLayoutAlign="start center" class="tab-content">Coming Soon</div>
         </mat-tab>
       </mat-tab-group>
-    </div>
-  </div>
+    </mat-card-content>
+  </mat-card>
 </div>

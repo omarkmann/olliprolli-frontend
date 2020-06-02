@@ -1,27 +1,29 @@
 <div fxLayout="column" fxLayoutAlign="start center">
   <table mat-table [dataSource]="playerStatsList">
     <ng-container matColumnDef="number">
-      <th mat-header-cell *matHeaderCellDef> # </th>
-      <td mat-cell *matCellDef="let stats; let i = index"> {{i+1}} </td>
+      <th mat-header-cell *matHeaderCellDef>#</th>
+      <td mat-cell *matCellDef="let stats; let i = index"> {{i + 1}} </td>
     </ng-container>
 
     <!-- Name Column -->
     <ng-container matColumnDef="icon">
-      <th mat-header-cell *matHeaderCellDef> Icon </th>
+      <th mat-header-cell *matHeaderCellDef>Icon</th>
       <td mat-cell *matCellDef="let stats">
-        <img class="player-logo" src="{{stats.iconUrl}}" alt="icon">
+        <div fxLayout="row">
+          <img class="player-logo" src="{{stats.iconUrl}}" alt="icon" fxFlexAlign="center">
+        </div>
       </td>
     </ng-container>
 
     <!-- Weight Column -->
     <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let stats"> {{stats.playerName}} </td>
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let stats">{{stats.playerName}}</td>
     </ng-container>
 
     <!-- Symbol Column -->
     <ng-container matColumnDef="actions">
-      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <th mat-header-cell *matHeaderCellDef>Actions</th>
       <td mat-cell *matCellDef="let stats">
         <button mat-icon-button routerLink="/player-stats/{{stats.playerName}}">
           <mat-icon>info</mat-icon>
