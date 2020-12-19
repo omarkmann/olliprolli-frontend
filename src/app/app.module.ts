@@ -8,16 +8,17 @@ import {HeaderComponent} from './components/header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {RouterModule} from '@angular/router';
 import {MatMenuModule} from '@angular/material/menu';
-import { AppRoutingModule } from './app-routing.module';
-import { NumberGeneratorComponent } from './components/number-generator/number-generator.component';
+import {AppRoutingModule} from './app-routing.module';
+import {NumberGeneratorComponent} from './components/number-generator/number-generator.component';
 import {MatButtonModule} from '@angular/material/button';
-import { PlayerStatsComponent } from './components/player-stats/player-stats.component';
+import {PlayerStatsComponent} from './components/player-stats/player-stats.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
-import { PlayerStatsDetailComponent } from './components/player-stats-detail/player-stats-detail.component';
+import {PlayerStatsDetailComponent} from './components/player-stats-detail/player-stats-detail.component';
 import {HttpClientModule} from '@angular/common/http';
 import {MatIconModule} from '@angular/material/icon';
-import {MatTabsModule} from '@angular/material/tabs'; // CLI imports AppRoutingModule
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle'; // CLI imports AppRoutingModule
 
 @NgModule({
   declarations: [
@@ -35,12 +36,13 @@ import {MatTabsModule} from '@angular/material/tabs'; // CLI imports AppRoutingM
     FlexLayoutModule,
     RouterModule,
     MatMenuModule,
-    MatButtonModule,
-    MatCardModule,
-    MatTableModule,
+    MatSlideToggleModule,
     HttpClientModule,
     MatIconModule,
-    MatTabsModule
+    MatTabsModule,
+    MatButtonModule,
+    MatCardModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

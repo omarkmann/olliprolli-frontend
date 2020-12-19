@@ -1,6 +1,10 @@
-<mat-toolbar fxLayoutGap="8px" fxLayoutAlign="space-between center" fxLayout.lt-sm="column" fxLayoutAlign.lt-sm="center center">
+<mat-toolbar fxLayoutGap="8px" fxLayoutAlign="space-between center" fxLayout.lt-sm="column"
+             fxLayoutAlign.lt-sm="center center">
   <div routerLink="/" class="brand">olliprolli.de</div>
-  <div fxLayout="row" fxLayoutAlign="space-evenly start">
+  <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="8px">
+    <mat-slide-toggle (change)="changeTheme($event)" [checked]="initialDarkMode" labelPosition="before" color="primary">
+      Dark Mode
+    </mat-slide-toggle>
     <button mat-button routerLink="number-generator" routerLinkActive="mat-primary">Number Generator</button>
     <button mat-button routerLink="player-stats" routerLinkActive="mat-primary">Player Stats</button>
   </div>
